@@ -16,7 +16,10 @@ class App extends Component {
         items:[],
         // incremente decrement exercise
         clicks:0,
-        show:true
+        show:true,
+         // it will be the input
+         termApi:'',
+        imgApi:'' // it will have the url we will passing to img srr=url
     };
   }
   // intro react
@@ -44,7 +47,20 @@ class App extends Component {
 ToggleClick=()=>{
   this.setState({show:!this.state.show});
 }
-
+// api tutorial 3
+  // YO QUERIA HACER QUE EL MISMO ONCHANGE COGIERA EL STATE QUE LE CORRESPONDIERA PERO NO HE PODIDO
+  onChangeApi =(event)=>{
+    this.setState({termApi:event.target.value});
+  }
+  handleSubmit = (event)=>{
+    event.preventDefault();
+    const api_key = 'dc6zaTOxFJmzC';
+    const url = `http://api.giphy.com/v1/gifs/search?q=${this.state.termApi}&api_key=${api_key}`;
+    fetch(url)
+      .then(response=> response.json())
+      .then(data=>this.setState({termApi:'',img:data.data[0].images.fixed_height.url}))
+      .catch(e=>console.log('error',e));
+  }
 // todo mi html , la vista
   render() {
     return (
@@ -62,6 +78,12 @@ ToggleClick=()=>{
           <button onClick={this.DecrementItem}> -</button>
           <button onClick={this.ToggleClick}> {this.state.show? "Hide number":"Show Number"}</button>
           {this.state.show? <h2>{this.state.clicks}</h2>: ""}
+          <p>Form for the APi - exercise 3</p>
+          <form onSubmit={this.handleSubmit}>
+            <input value={this.state.termApi} onChange={this.onChangeApi}/>
+             <button>Search!</button>
+          </form>
+          <img src={this.state.img} height="200" alt={this.state.termApi} />
       </div>
     );
   }
