@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: App should match its empty snapshot 1`] = `
+<div>
+  <p>
+    To Do list 
+  </p>
+  <form
+    className="App"
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      value="hola que tal"
+    />
+    <button>
+      Submit
+    </button>
+  </form>
+  <div
+    style={
+      Object {
+        "border": "5px solid pink",
+        "margin": "40px",
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "fontSize": "15px",
+          "textAlign": "center",
+        }
+      }
+    >
+      Here we have the css inline style
+    </p>
+    <ul />
+  </div>
+  <p>
+    Intro React 
+  </p>
+  <button
+    onClick={[Function]}
+  >
+     
+    On
+  </button>
+  <div>
+    Hello 
+    Davinia :)
+    !
+  </div>
+  <button
+    onClick={[Function]}
+  >
+     +
+  </button>
+  <button
+    onClick={[Function]}
+  >
+     -
+  </button>
+  <button
+    onClick={[Function]}
+  >
+     
+    Hide number
+  </button>
+  <h2>
+    0
+  </h2>
+  <p>
+    Form for the APi - exercise 3
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      value=""
+    />
+    <button>
+      Search!
+    </button>
+  </form>
+  <img
+    alt=""
+    height="100"
+    src={undefined}
+  />
+  <div
+    className="DottedBox"
+  >
+    <p
+      className="DottedBox_content"
+    >
+      Get started with CSS styling
+    </p>
+  </div>
+  <div
+    className={undefined}
+  >
+    <p
+      className={undefined}
+    >
+      Get started with CSS Modules style
+    </p>
+  </div>
+  <div
+    className="sc-bdVaJa bTyjFR"
+  >
+    <p
+      className="sc-bwzfXH ivFfLq"
+    >
+      Get started with styled-components 💅
+    </p>
+    👤  CTRL+CMD+SPACE para los emoticonos
+  </div>
+  <div>
+    Counter value: 
+    0
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Click1
+  </button>
+</div>
+`;
