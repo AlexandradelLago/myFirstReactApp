@@ -6,6 +6,7 @@ import MyComponent from './MyComponent';
 import DottedBox from './DottedBox';
 import styles from './DashedBox.css';
 import OutsetBoxStyledC from './OutsetBoxStyledC';
+import Counter from './Counter';
 
 class App extends Component {
   constructor(props) {
@@ -21,9 +22,17 @@ class App extends Component {
         show:true,
          // it will be the input
          termApi:'',
-        imgApi:'' // it will have the url we will passing to img srr=url
-    };
+        imgApi:'', // it will have the url we will passing to img srr=url
+      // tutorial 5 - Mounting 
+        counter:0
+      };
   }
+  // tutorial 5
+  incrementCounter = () => {
+    this.setState({
+      counter: ++this.state.counter
+    });
+  };
   // intro react
   toggle = () => {
     this.setState({isOn: !this.state.isOn})
@@ -91,7 +100,17 @@ ToggleClick=()=>{
     <p className={styles.content}>Get started with CSS Modules style</p>
   </div>
         <OutsetBoxStyledC>Este es mi OutsetBox con styles</OutsetBoxStyledC>
+        <Counter counter={this.state.counter} />
+        
+   
+      <button onClick={this.incrementCounter}>Click1</button>
+      
+     
       </div>
+      // mounting and updating
+    
+        
+     
     );
   }
 }
