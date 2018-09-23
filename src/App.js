@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import List from './List';
 import MyComponent from './MyComponent';
-
+import DottedBox from './DottedBox';
+import styles from './DashedBox.css';
+import OutsetBoxStyledC from './OutsetBoxStyledC';
 
 class App extends Component {
   constructor(props) {
@@ -83,7 +85,12 @@ ToggleClick=()=>{
             <input value={this.state.termApi} onChange={this.onChangeApi}/>
              <button>Search!</button>
           </form>
-          <img src={this.state.img} height="200" alt={this.state.termApi} />
+          <img src={this.state.img} height="100" alt={this.state.termApi} />
+          <DottedBox></DottedBox>
+          <div className={styles.container}>
+    <p className={styles.content}>Get started with CSS Modules style</p>
+  </div>
+        <OutsetBoxStyledC>Este es mi OutsetBox con styles</OutsetBoxStyledC>
       </div>
     );
   }
